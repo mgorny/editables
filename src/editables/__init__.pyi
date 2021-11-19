@@ -25,6 +25,9 @@ class EditableProject:
     def add_to_path(self, dirname: _StrOrPath) -> None:
         ...
 
+    def files(self) -> str:
+        ...
+
     def dependencies(self) -> list[str]:
         ...
 
