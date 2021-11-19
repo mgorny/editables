@@ -1,9 +1,10 @@
 from importlib.machinery import ModuleSpec
+import importlib.abc
 import types
 from pathlib import Path
 from typing import Sequence
 
-class RedirectingFinder:
+class RedirectingFinder(importlib.abc.MetaPathFinder):
     _redirections: dict[str, str]
 
     @classmethod

@@ -1,8 +1,9 @@
+import importlib.abc
 import importlib.util
 import sys
 
 
-class RedirectingFinder:
+class RedirectingFinder(importlib.abc.MetaPathFinder):
     _redirections = {}
 
     @classmethod
